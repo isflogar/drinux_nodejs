@@ -1,0 +1,33 @@
+<%- include layouts/header.ejs %>
+
+        <div class="page-data">
+
+            <form method="post" action="/add">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Nombre</td><td>: <input type="text" name="nombre" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Apellidos</td><td>: <input type="text" name="apellidos" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Edad</td><td>: <input type="text" name="edad" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Dirección</td><td>: <input type="text" name="direccion" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Teléfono</td><td>: <input type="text" name="telefono" required></td>
+                </tr>
+                <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Guardar">
+                       <a href="/">Cancelar</a>
+                    </td>
+                </tr>
+                </table>
+            </form>
+        </div>
+
+<%- include layouts/footer.ejs %>

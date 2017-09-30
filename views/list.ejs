@@ -1,0 +1,49 @@
+<%- include layouts/header.ejs %>
+        <div class="page-data">
+         <div class="data-btn">
+           <a href="/add">Agregar</a>
+           <br><br>
+         </div>
+         <div class="data-table">
+            <table border="1" cellpadding="5" cellspacing="0">
+                <tr>
+                    <th>Apellidos</th>
+                    <th>Nombres</th>
+                    <th>Edad</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th width="120px">Acciones</th>
+                </tr>
+
+                <% if(data.length){
+
+                 for(var i = 0;i < data.length;i++) { %>
+
+                <tr>
+                    <td><%=data[i].apellidos%></td>
+                    <td><%=data[i].nombre%></td>
+                    <td><%=data[i].edad%></td>
+                    <td><%=data[i].direccion%></td>
+                    <td><%=data[i].telefono%></td>
+                    <td>
+                        <a class="a-inside edit" href="../get/<%=data[i].id%>">Editar</a>
+
+                        <a class="a-inside delete" href="../delete/<%=data[i].id%>">Eliminar</a>
+
+                    </td>
+                </tr>
+            <% }
+
+             }else{ %>
+                 <tr>
+                    <td colspan="3">No hay datos</td>
+                 </tr>
+            <% } %>
+
+
+
+            </table>
+         </div>
+        </div>
+
+<%- include layouts/footer.ejs %>

@@ -1,0 +1,40 @@
+<%- include layouts/header.ejs %>
+        <div class="page-data">
+
+            <form method="post" action="/edit/<%=data[0].id%>">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Nombre(s)</td>
+                    <td>: <input type="text" name="nombre" value="<%=data[0].nombre%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label" valign="top">Apellidos</td>
+                    <td valign="top">:
+                        <input type="text" name="apellidos" value="<%=data[0].apellidos%>" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Edad</td>
+                    <td>: <input type="text" value="<%=data[0].edad%>" name="edad" required></td>
+                 </tr>
+                  <tr>
+                    <td class="label">Dirección</td>
+                    <td>: <input type="text" name="direccion" value="<%=data[0].direccion%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Teléfono</td>
+                    <td>: <input type="text" name="telefono" value="<%=data[0].telefono%>" required></td>
+                 </tr>
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <a href="/">Cancelar</a>
+                    </td>
+                 </tr>
+                </table>
+            </form>
+
+        </div>
+
+<%- include layouts/footer.ejs %>
